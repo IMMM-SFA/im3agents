@@ -1,12 +1,12 @@
-[![Build Status](https://travis-ci.org/IMMM-SFA/im3py.svg?branch=master)](https://travis-ci.org/IMMM-SFA/im3py) 
-[![codecov](https://codecov.io/gh/IMMM-SFA/im3py/branch/master/graph/badge.svg)](https://codecov.io/gh/IMMM-SFA/im3py)
+[![Build Status](https://travis-ci.org/IMMM-SFA/im3agents.svg?branch=master)](https://travis-ci.org/IMMM-SFA/im3agents)
+[![codecov](https://codecov.io/gh/IMMM-SFA/im3agents/branch/master/graph/badge.svg)](https://codecov.io/gh/IMMM-SFA/im3agents)
 
 # im3agents
 A versatile agent library for Python
 
 
 ## Overview
-The purpose of `im3agents` is to help developers quickly establish a GitHub repository that conforms to IM3 software engineering standards.  Our hope is to create a common user experience for all Python modeling software developed for use in IM3 experiments.  We are mindfully developing software that exposes key variables per time-step so that they may be used in integrated and/or uncertainty characterization experiments while still maintaining the ability for autonomous use.  This template package establishes the structure necessary to wrap existing Python code in our modeling interface and time-step processing generator.  We also include:  a sample test suite, `Zenodo`, `Travis-CI`, and `codecov` standard files and setup protocol, our expected `docstring` style, a `stdout` and file logger, and an example fake code file that represents a user's code contribution.
+The purpose of `im3agents` is to ...
 
 ## Getting Started Using the `im3agents` Package
 The `im3agents` package uses only **Python 3.3** and up.
@@ -25,7 +25,6 @@ import im3agents
 
 If no error is returned then you are ready to go!
 
-## Setting up a run
 
 ## Examples
 
