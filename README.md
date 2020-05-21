@@ -30,7 +30,7 @@ If no error is returned then you are ready to go!
 
 ### Example 1:  FarmerOne agent has an age
 ```python
-from im3agents.farmers import FarmerOne
+from im3agents import FarmerOne
 
 farmer_one = FarmerOne(age=32)
 

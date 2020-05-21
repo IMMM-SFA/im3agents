@@ -9,7 +9,7 @@ License:  BSD 2-Clause, see LICENSE and DISCLAIMER files
 
 import unittest
 
-from im3agents.farmers import FarmerOne
+from im3agents import FarmerOne
 
 
 class TestFarmers(unittest.TestCase):
