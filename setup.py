@@ -21,7 +21,7 @@ def get_requirements():
 
 
 setup(
-    name='im3py',
+    name='im3agents',
     version='0.1.0',
     packages=find_packages(),
     url='https://github.com/IMMM-SFA/im3py.git',

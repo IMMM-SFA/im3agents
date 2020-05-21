@@ -1,2 +1,1 @@
-setuptools>=24
 pyyaml>=3.0
