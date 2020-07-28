@@ -43,4 +43,49 @@ class RandomWalk:
     def adjacency_dict(self):
         
     
+class BarabasiAlbert:
+     """This is the class that builds a Barabasi-Albert network.
 
+    :param agentIDs:               Set of agent IDs
+    :type agentIDs:                numpy array of ints
+
+
+
+    """
+   
+
+
+    def __init__(self, agentIDs):
+        self._agentIDs = agentIDs
+   
+    
+    
+class SmallWorld:
+     """This is the class that builds a small world network.
+
+    :param agentIDs:               Set of agent IDs
+    :type agentIDs:                numpy array of ints
+
+
+
+    """
+    def __init__(self, agentIDs):
+        self._agentIDs = agentIDs
+   
+          
+
+
+
+class ErdosRenyi:
+     """This is the class that builds an Erdos-Renyi network.
+
+    :param agentIDs:               Set of agent IDs
+    :type agentIDs:                numpy array of ints
+
+
+
+    """
+    def __init__(self, agentIDs):
+        self._agentIDs = agentIDs
+   
+      
