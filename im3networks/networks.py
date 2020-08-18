@@ -1,91 +1,39 @@
-"""Random walk class.
-
-:author:   hollybossart
-:email:    hollybossart@u.boisestate.edu
-
-License:  BSD 2-Clause, see LICENSE and DISCLAIMER files
-
 """
+A module containing network functions to generate and read from networks.
+
+@author: hollybossart
+"""
+
+
+import networkx as nx
 import numpy as np
 
-class RandomWalk:
-    """This is the class that builds a random walk network.
-
-    :param agentIDs:               Set of agent IDs
-    :type agentIDs:                numpy array of ints
 
 
-
+def generate_random_walk(Ny, Nx, agents):
     """
-   
 
+    :param Ny: Number of columns in domain
+    :param Nx: Number of rows in domain
+    :param agents: numpy array of agentIDs
 
-    def __init__(self, agentIDs):
-        self._agentIDs = agentIDs
+    :return: dictionary of agent and their network connections
 
-    @property
-    def agents(self):
-        """Agents must not be empty."""
-
-        if self._agentIDs.size == 0:
-            raise ValueError(f"Agents array must not be empty.")
-
-        else:
-            return self._agentIDs
-        
-    # TODO: docstrings -- maybe build network will actually occur in the init?
-    def build_network(self):
-        
+    """    
+    return 
     
-    # TODO: docstrings
-    # will return an array of the agent IDs
-    @property
-    def adjacency_dict(self):
-        
+
+def generate_erdos_renyi(agents):
     
-class BarabasiAlbert:
-     """This is the class that builds a Barabasi-Albert network.
-
-    :param agentIDs:               Set of agent IDs
-    :type agentIDs:                numpy array of ints
-
-
-
-    """
-   
-
-
-    def __init__(self, agentIDs):
-        self._agentIDs = agentIDs
-   
+    return 
     
+
+def generate_barabasi_alberts(agents):
     
-class SmallWorld:
-     """This is the class that builds a small world network.
+    return 
 
-    :param agentIDs:               Set of agent IDs
-    :type agentIDs:                numpy array of ints
+def get_neighbors(network, agentID):
+    
+    return 
+    
 
-
-
-    """
-    def __init__(self, agentIDs):
-        self._agentIDs = agentIDs
-   
-          
-
-
-
-class ErdosRenyi:
-     """This is the class that builds an Erdos-Renyi network.
-
-    :param agentIDs:               Set of agent IDs
-    :type agentIDs:                numpy array of ints
-
-
-
-    """
-    def __init__(self, agentIDs):
-        self._agentIDs = agentIDs
-   
-      
