@@ -4,9 +4,13 @@
 # im3agents
 A versatile agent library for Python
 
+## Contact
+- Holly Bossart (hollybossart@u.boisestate.edu)
+- Kendra Kaiser (kendrakaiser@boisestate.edu)
 
 ## Overview
 The purpose of `im3agents` is to ...
+
 
 ## Getting Started Using the `im3agents` Package
 The `im3agents` package uses only **Python 3.3** and up.
@@ -25,14 +29,16 @@ import im3agents
 
 If no error is returned then you are ready to go!
 
+## Setting Up 
+
+### Network Types
+| Name | Description | Additional Parameters |
+| -- | -- | -- |
+| Barabasi-Albert | | |
+| Erdos-Renyi | | | 
+| Watts-Strogatz Small World | | |
+| Random Walk | | |
 
 ## Examples
 
-### Example 1:  FarmerOne agent has an age
-```python
-from im3agents.farmers import FarmerOne
-
-farmer_one = FarmerOne(age=32)
-
-print(farmer_one.age)
-```
+### Example 1:  
