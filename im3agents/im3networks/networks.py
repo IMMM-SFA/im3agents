@@ -1,5 +1,5 @@
 """
-A module containing network functions to generate and read from networks.
+A module containing functions to generate networks.
 
 @author: hollybossart
 """
@@ -10,14 +10,16 @@ import numpy as np
 from itertools import product
 
 
-def generate_random_walk(Ny, Nx, agents, torus, mean_path_length):
+def generate_random_walk(Ny, Nx, agents, torus, time):
     """
+    This generates a random walk network given the initial grid, agents,
+    torus, and maximum mean path length.
 
     :param Ny: Number of columns in domain
     :param Nx: Number of rows in domain
     :param agents: numpy array of agentIDs
     :param torus: Boolean flag for wrap around / not wrapping around grid
-    :param mean_path_length: 
+    :param time: the number of time steps to run random walk
 
     :return: dictionary of agent and their network connections
 
@@ -35,7 +37,10 @@ def generate_random_walk(Ny, Nx, agents, torus, mean_path_length):
     current_loc_dict = dict(zip(agents, coordinates))
     
     # looping through time steps
-    for i in time:
+    # TODO: add in conditional to be based off of other metrics described by Vicken
+    # see previous Confluence notes about target mean path length, skewness of degree dist, and cluster coef
+    # also see M+S paper Vicken sent
+    for i in range(time):
         
         # making a location dictionary to see who is at each location at any given time
         # this is organized such that each space is a key and the agents on it are the values
@@ -125,14 +130,14 @@ def generate_random_walk(Ny, Nx, agents, torus, mean_path_length):
                 edge_tuples = list(product(current_agents, current_agents))
                 network.add_edges_from(edge_tuples)
     
-    
     return network
     
     
 
 def generate_erdos_renyi(agents, prob_edge):
     """
-    This function generates an Erdos-Renyi style network given an array of agentIDs.
+    This function generates an Erdos-Renyi style network given a list of agentIDs,
+    and a probability for edge creation.
 
     :param agents: list of unique agentIDs
     :param prob_edge: the probability that a given agent will develop a connection
@@ -151,9 +156,10 @@ def generate_erdos_renyi(agents, prob_edge):
     return nx.convert.to_dict_of_lists(graph)
     
 
-def generate_barabasi_alberts(agents, num_edges):
+def generate_barabasi_albert(agents, num_edges):
     """
-    This function generates an Erdos-Renyi style network given an array of agentIDs.
+    This function generates Barabasi-ALbert network given an array of agentIDs,
+    and a fixed number of edges.
 
     :param agents: list of unique agentIDs
     :param num_edges: total number of edges between agents
@@ -171,8 +177,28 @@ def generate_barabasi_alberts(agents, num_edges):
     # key is the agentID, and value is a list of all agents connected to that node
     return nx.convert.to_dict_of_lists(graph)
 
-def get_neighbors(network, agentID):
+def generate_small_world(agents, knn, rewire_prob):
+    """
+    This function generates an Watts Strogatz Small World style network given 
+    a list of agentIDs, nearest neighbors to have in ring topology, and the probability that
+    each edge will be rewired.
+
+    :param agents: list of unique agentIDs
+    :param knn: nearest neighbors to have in ring topology
+    :param rewire_prob: probability that each edge is rewired
+    :return: dictionary of agent and their network connections
+
+    """    
+    agent_count = len(agents)
     
-    return 
+    graph = nx.generators.random_graphs.watts_strogatz_graph(agent_count, knn, rewire_prob)
     
+    # must relabel graph with new nodes so we create a dict with the old and new labels
+    agent_node_dict = dict(zip(graph.nodes, agents))
+    graph = nx.relabel.relabel_nodes(graph, agent_node_dict)
+    
+    # key is the agentID, and value is a list of all agents connected to that node
+    return nx.convert.to_dict_of_lists(graph)
+
+
 
