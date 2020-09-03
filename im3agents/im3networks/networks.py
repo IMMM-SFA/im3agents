@@ -151,9 +151,25 @@ def generate_erdos_renyi(agents, prob_edge):
     return nx.convert.to_dict_of_lists(graph)
     
 
-def generate_barabasi_alberts(agents):
+def generate_barabasi_alberts(agents, num_edges):
+    """
+    This function generates an Erdos-Renyi style network given an array of agentIDs.
+
+    :param agents: list of unique agentIDs
+    :param num_edges: total number of edges between agents
+    :return: dictionary of agent and their network connections
+
+    """    
+    agent_count = len(agents)
     
-    return 
+    graph = nx.generators.random_graphs.barabasi_albert_graph(agent_count, num_edges)
+    
+    # must relabel graph with new nodes so we create a dict with the old and new labels
+    agent_node_dict = dict(zip(graph.nodes, agents))
+    graph = nx.relabel.relabel_nodes(graph, agent_node_dict)
+    
+    # key is the agentID, and value is a list of all agents connected to that node
+    return nx.convert.to_dict_of_lists(graph)
 
 def get_neighbors(network, agentID):
     
