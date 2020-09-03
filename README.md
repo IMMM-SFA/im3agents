@@ -33,11 +33,11 @@ If no error is returned then you are ready to go!
 
 ### Network Types
 | Name | Description | Additional Parameters | Additional Information |
-| -- | -- | -- |
-| Barabasi-Albert | | |
-| Erdos-Renyi | | | 
-| Watts-Strogatz Small World | | |
-| Random Walk | | |
+| -- | -- | -- | -- |
+| Barabasi-Albert | | | |
+| Erdos-Renyi | | | |
+| Watts-Strogatz Small World | | | |
+| Random Walk | | | |
 
 ## Examples
 
