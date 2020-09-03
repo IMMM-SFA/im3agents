@@ -130,9 +130,25 @@ def generate_random_walk(Ny, Nx, agents, torus, mean_path_length):
     
     
 
-def generate_erdos_renyi(agents):
+def generate_erdos_renyi(agents, prob_edge):
+    """
+    This function generates an Erdos-Renyi style network given an array of agentIDs.
+
+    :param agents: list of unique agentIDs
+    :param prob_edge: the probability that a given agent will develop a connection
+    :return: dictionary of agent and their network connections
+
+    """    
+    agent_count = len(agents)
     
-    return 
+    graph = nx.generators.random_graphs.erdos_renyi_graph(agent_count, prob_edge)
+    
+    # must relabel graph with new nodes so we create a dict with the old and new labels
+    agent_node_dict = dict(zip(graph.nodes, agents))
+    graph = nx.relabel.relabel_nodes(graph, agent_node_dict)
+    
+    # key is the agentID, and value is a list of all agents connected to that node
+    return nx.convert.to_dict_of_lists(graph)
     
 
 def generate_barabasi_alberts(agents):
