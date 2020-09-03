@@ -32,7 +32,7 @@ If no error is returned then you are ready to go!
 ## Setting Up 
 
 ### Network Types
-| Name | Description | Additional Parameters |
+| Name | Description | Additional Parameters | Additional Information |
 | -- | -- | -- |
 | Barabasi-Albert | | |
 | Erdos-Renyi | | | 
@@ -43,7 +43,8 @@ If no error is returned then you are ready to go!
 
 ### Example 1:  Creating a Barabasi-Albert, Erdos-Renyi or Watts-Strogatz Small World network structure
 
-The inputs for these three network generators is a `numpy` array of agent IDs.
+The inputs for these three network generators is a list of agent IDs. Additionally, these three network types have additional parameters that
+characterize them. Please see the above table.
 *Note:* Each agent must have a unique, hashable attribute as an ID for the network generation to work.
 
 
@@ -61,6 +62,16 @@ of some known agent, (for example, `1234`) can be done as follows:
 connections = N[1234]
 ```
 
+where `connections` is a list.
+
 To learn more about built-in `dict` functionality that can be used on your network, view the [Python documentation.](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) 
 
-#### Example 4: Plotting your network
+### Example 4: Plotting your network
+
+
+## Notes:
+* This version of `im3agents` does not support edge information, including edge weights, between agents. This is possible to implement in a future version by updating the output type of networks to `dict` of `dict`, rather than a `dict` of `list` type. 
+
+* If you plan to include this in your `requirements.txt` file, the proper way to do this is the following:
+`im3agents==<VERSIONNUMBER>|https://github.com/IMMM-SFA/im3agents/archive/<VERSIONNUMBER>.zip#egg=im3agents-<VERSIONNUMBER>` where `<VERSIONNUMBER>` is equal to the current version number, which is 0.3.0.
+
