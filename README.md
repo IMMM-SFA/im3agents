@@ -43,16 +43,8 @@ See the `networkx` documentation for more information.
 
 ## Examples
 
-### Example 1:  Creating a Barabasi-Albert, Erdos-Renyi or Watts-Strogatz Small World network structure
 
-The inputs for these three network generators is a list of agent IDs. Additionally, these three network types have additional parameters that
-characterize them. Please see the above table.
-*Note:* Each agent must have a unique, hashable attribute as an ID for the network generation to work.
-
-
-### Example 2: Creating a Random Walk network structure
-
-### Example 3: Accessing network connections
+### Example 1: Accessing network connections
 The network structures are stored as `dict` data types. This allows for easy and fast access to network connections using built-in Python 
 `dict` functionality without much overhead.
 
@@ -68,7 +60,7 @@ where `connections` is a list.
 
 To learn more about built-in `dict` functionality that can be used on your network, view the [Python documentation.](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) 
 
-### Example 4: Plotting your network
+### Example 2: Plotting your network
 To import a network and plot it from the `dict` data structure, you need to first convert the given `dict` to a `networkX` graph object using the [following function.](https://networkx.github.io/documentation/stable/reference/generated/networkx.convert.from_dict_of_dicts.html#networkx.convert.from_dict_of_dicts)
 
 ```
