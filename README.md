@@ -34,9 +34,9 @@ If no error is returned then you are ready to go!
 ### Network Types
 | Name | Description | Additional Parameters | Additional Information |
 | -- | -- | -- | -- |
-| [Barabasi-Albert](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.barabasi_albert_graph.html) | This graph is characterized by preferential attachment.  | `n`: number of nodes    `m`: number of edges | See ['Emergence of scaling in random networks](https://arxiv.org/abs/cond-mat/9910332) |
-| Erdos-Renyi | | | |
-| Watts-Strogatz Small World | | | |
+| [Barabasi-Albert](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.barabasi_albert_graph.html) | This graph is characterized by preferential attachment.  | `n`: number of nodes and `m`: number of edges | See ['Emergence of scaling in random networks'](https://arxiv.org/abs/cond-mat/9910332) |
+| [Erdos-Renyi](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.erdos_renyi_graph.html#networkx.generators.random_graphs.erdos_renyi_graph) | This algorithm chooses all possible edges with some given probability, `p.` | `n`: number of nodes and `p`: probability of edge creation | See ['On random graphs.'](https://www.renyi.hu/~p_erdos/1959-11.pdf) |
+| [Watts-Strogatz Small World](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.watts_strogatz_graph.html) | Each node is joined with its `k` nearest neighbors with probability `p` of rewiring. | `n`: number of nodes, `k`: nearest neighbors to join with, `p`: probability of rewiring each edge|  See ['Collective dynamics of small world networks'](https://www.nature.com/articles/30918)|
 | Random Walk | | | |
 
 See the `networkx` documentation for more information.
