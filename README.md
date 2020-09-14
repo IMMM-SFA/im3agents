@@ -32,7 +32,7 @@ If no error is returned then you are ready to go!
 ## Setting Up 
 
 ### Network Types
-| Name | Description | Additional Parameters | Additional Information |
+| Name | Description  | Additional Information |
 | -- | -- | -- |
 | [Barabasi-Albert](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.barabasi_albert_graph.html) | This graph is characterized by preferential attachment.  | See ['Emergence of scaling in random networks'](https://arxiv.org/abs/cond-mat/9910332) |
 | [Erdos-Renyi](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.erdos_renyi_graph.html#networkx.generators.random_graphs.erdos_renyi_graph) | This algorithm chooses all possible edges with some given probability, `p.` | See ['On random graphs.'](https://www.renyi.hu/~p_erdos/1959-11.pdf) |
