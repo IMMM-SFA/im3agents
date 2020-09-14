@@ -34,7 +34,7 @@ If no error is returned then you are ready to go!
 ### Network Types
 | Name | Description | Additional Parameters | Additional Information |
 | -- | -- | -- | -- |
-| [Barabasi-Albert](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.barabasi_albert_graph.html) | This graph is characterized by preferential attachment.  | `n`: number of nodes \n `m`: number of edges | See ['Emergence of scaling in random networks](https://arxiv.org/abs/cond-mat/9910332) |
+| [Barabasi-Albert](https://networkx.github.io/documentation/stable/reference/generated/networkx.generators.random_graphs.barabasi_albert_graph.html) | This graph is characterized by preferential attachment.  | `n`: number of nodes    `m`: number of edges | See ['Emergence of scaling in random networks](https://arxiv.org/abs/cond-mat/9910332) |
 | Erdos-Renyi | | | |
 | Watts-Strogatz Small World | | | |
 | Random Walk | | | |
