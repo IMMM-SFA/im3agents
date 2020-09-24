@@ -22,7 +22,7 @@ def get_requirements():
 
 setup(
     name='im3agents',
-    version='0.1.0',
+    version='0.3.1',
     packages=find_packages(),
     url='https://github.com/IMMM-SFA/im3py.git',
     license='BSD 2-Clause',
